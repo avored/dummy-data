@@ -17,8 +17,7 @@
     },
   "autoload": {
     "classmap": [
-      "database/seeds",
-      "database/factories"
+      "database/seeds"
     ],
     "psr-4": {
       "AvoRed\\DummyData\\": "src"
