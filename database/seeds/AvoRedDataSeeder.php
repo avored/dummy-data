@@ -5,8 +5,8 @@ use AvoRed\Framework\Models\Database\Category;
 use AvoRed\Framework\Models\Database\Product;
 use Faker\Factory;
 use AvoRed\Framework\Models\Database\ProductImage;
-use AvoRed\Ecommerce\Models\Database\Country;
 use AvoRed\Ecommerce\Models\Database\Page;
+use AvoRed\Ecommerce\Models\Database\Configuration;
 
 
 class AvoRedDataSeeder extends Seeder
@@ -348,17 +348,17 @@ class AvoRedDataSeeder extends Seeder
 
 
         $homePageContent = html_entity_decode('<p>&nbsp;</p><p>&nbsp;</p><p><strong>HOME PAGE FOR MAGE2 E COMMERCE LARAVEL OPEN SOURCE SHOPPING CART</strong></p><p>&nbsp;</p><p><strong>Please star us on&nbsp;<a href="https://github.com/avored/laravel-ecommerce">https://github.com/avored/laravel-ecommerce</a></strong></p><p><strong>Like us on Facebook :&nbsp;<a href="https://www.facebook.com/avored/">https://www.facebook.com/avored/</a></strong></p><p><strong>Follow us on Twitter:&nbsp;<a href="https://twitter.com/avoredecommerce/">https://twitter.com/avoredecommerce/</a></strong></p>');
-        $homePage = factory(\AvoRed\Ecommerce\Models\Database\Page::class)->create(['name' => 'Home Page',
+        $homePage = Page::create(['name' => 'Home Page',
                                                                                     'slug' => 'home-page',
                                                                                     'content' => $homePageContent,
                                                                                     'meta_title' => 'Home Page - AvoRed E commerce']);
-        \AvoRed\Ecommerce\Models\Database\Configuration::create(['configuration_key' => 'general_home_page',
+        Configuration::create(['configuration_key' => 'general_home_page',
                                                                 'configuration_value' => $homePage->id]);
 
-        $termPage = factory(\AvoRed\Ecommerce\Models\Database\Page::class)->create(['name' => 'Term & Condition',
+        $termPage = Page::create(['name' => 'Term & Condition',
                                                                                     'slug' => 'term-condition',
                                                                                     'meta_title' => 'Term & Condition - AvoRed E commerce']);
-        \AvoRed\Ecommerce\Models\Database\Configuration::create(['configuration_key' => 'general_term_condition_page',
+        Configuration::create(['configuration_key' => 'general_term_condition_page',
                                                                 'configuration_value' => $termPage->id]);
 
     }
