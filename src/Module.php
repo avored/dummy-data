@@ -46,7 +46,7 @@ class Module extends ServiceProvider
 
 
     public function publishFiles() {
-        $this->publishes([__DIR__.'../assets' => public_path('uploads')], 'public');
+        $this->publishes([__DIR__.'/../assets' => public_path()], 'public');
     }
 }
 
