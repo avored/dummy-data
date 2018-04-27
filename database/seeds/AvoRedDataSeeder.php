@@ -356,8 +356,9 @@ class AvoRedDataSeeder extends Seeder
                                                                 'configuration_value' => $homePage->id]);
 
         $termPage = Page::create(['name' => 'Term & Condition',
-                                                                                    'slug' => 'term-condition',
-                                                                                    'meta_title' => 'Term & Condition - AvoRed E commerce']);
+                                'slug' => 'term-condition',
+                                'content' => $faker->text(200),
+                                'meta_title' => 'Term & Condition - AvoRed E commerce']);
         Configuration::create(['configuration_key' => 'general_term_condition_page',
                                                                 'configuration_value' => $termPage->id]);
 
