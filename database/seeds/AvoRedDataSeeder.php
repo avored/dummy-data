@@ -6,7 +6,7 @@ use AvoRed\Framework\Models\Database\Product;
 use Faker\Factory;
 use AvoRed\Framework\Models\Database\ProductImage;
 use AvoRed\Ecommerce\Models\Database\Page;
-use AvoRed\Ecommerce\Models\Database\Configuration;
+use AvoRed\Framework\Models\Database\Configuration;
 
 
 class AvoRedDataSeeder extends Seeder
