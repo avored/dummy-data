@@ -13,14 +13,13 @@ use Illuminate\Support\ServiceProvider;
 
 class Module extends ServiceProvider
 {
-
-
     /**
      * Indicates if loading of the provider is deferred.
      *
      * @var bool
      */
     ///protected $defer = true;
+
     /**
      * Bootstrap any application services.
      *
@@ -28,8 +27,7 @@ class Module extends ServiceProvider
      */
     public function boot()
     {
-       $this->publishFiles();
-
+        $this->publishFiles();
     }
 
     /**
@@ -39,14 +37,10 @@ class Module extends ServiceProvider
      */
     public function register()
     {
-
     }
 
-
-
-    public function publishFiles() {
-        $this->publishes([__DIR__.'/../assets' => public_path()], 'public');
+    public function publishFiles()
+    {
+        $this->publishes([__DIR__ . '/../assets' => storage_path('app/public')], 'public');
     }
 }
-
-
