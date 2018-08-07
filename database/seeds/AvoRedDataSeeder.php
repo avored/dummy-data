@@ -5,7 +5,7 @@ use AvoRed\Framework\Models\Database\Category;
 use AvoRed\Framework\Models\Database\Product;
 use Faker\Factory;
 use AvoRed\Framework\Models\Database\ProductImage;
-use AvoRed\Ecommerce\Models\Database\Page;
+use AvoRed\Framework\Models\Database\Page;
 use AvoRed\Framework\Models\Database\Configuration;
 
 class AvoRedDataSeeder extends Seeder
@@ -307,30 +307,30 @@ class AvoRedDataSeeder extends Seeder
             'type' => 'BASIC',
         ]);
 
-        \AvoRed\Ecommerce\Models\Database\Menu::create([
+        \AvoRed\Framework\Models\Database\Menu::create([
             'name' => $kitchenCategory->name,
             'params' => $kitchenCategory->slug,
             'route' => 'category.view',
         ]);
-        \AvoRed\Ecommerce\Models\Database\Menu::create([
+        \AvoRed\Framework\Models\Database\Menu::create([
             'name' => $bedroomCategory->name,
             'params' => $bedroomCategory->slug,
             'route' => 'category.view',
         ]);
-        \AvoRed\Ecommerce\Models\Database\Menu::create([
+        \AvoRed\Framework\Models\Database\Menu::create([
             'name' => $livingRoomCategory->name,
             'params' => $livingRoomCategory->slug,
             'route' => 'category.view',
         ]);
-        \AvoRed\Ecommerce\Models\Database\Menu::create([
+        \AvoRed\Framework\Models\Database\Menu::create([
             'name' => 'My Account',
             'route' => 'my-account.home',
         ]);
-        \AvoRed\Ecommerce\Models\Database\Menu::create([
+        \AvoRed\Framework\Models\Database\Menu::create([
             'name' => 'Cart',
             'route' => 'cart.view',
         ]);
-        \AvoRed\Ecommerce\Models\Database\Menu::create([
+        \AvoRed\Framework\Models\Database\Menu::create([
             'name' => 'Checkout',
             'route' => 'checkout.index',
         ]);
