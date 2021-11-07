@@ -23,7 +23,7 @@
 	],
 	"require" : {
 		"php" : ">=7.1.3",
-		"avored/module-installer" : "dev-master"
+		"avored/module-installer" : "dev-developed"
 	},
 	"autoload" : {
 		"classmap" : [
