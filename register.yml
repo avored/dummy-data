@@ -2,4 +2,4 @@ name: AvoRed Dummy Data
 identifier: avored-dummy-data
 description: AvoRed Dummy Data Module
 namespace: AvoRed\DummyData\
-status: Enabled
+status: active
