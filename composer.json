@@ -23,7 +23,7 @@
 	],
 	"require" : {
 		"php" : ">=7.1.3",
-		"avored/module-installer" : "dev-developed"
+		"avored/module-installer" : "1.*"
 	},
 	"autoload" : {
 		"psr-4" : {
