@@ -167,7 +167,7 @@ class AvoredDemoDataSchema extends Migration
             'documentable_type' => Product::class,
             'documentable_id' => $product->id
         ]);
-        // ProductImage::create(['path' => 'uploads/catalog/'. $product->id .'/avored-single-bed.jpg', 'product_id' => $product->id, 'is_main_image' => 1]);  
+        // ProductImage::create(['path' => 'uploads/catalog/'. $product->id .'/avored-single-bed.jpg', 'product_id' => $product->id, 'is_main_image' => 1]);
         // $product->properties()->sync($brandProperty);
         // $product->properties()->sync($materialProperty);
         // $product->productPropertyIntegerValues()->create(['property_id' => $brandProperty->id, 'value' => $avoredOption->id]);
@@ -205,8 +205,8 @@ class AvoredDemoDataSchema extends Migration
         ]);
         // $product->properties()->sync($brandProperty);
         // $product->properties()->sync($materialProperty);
-        
-        // ProductImage::create(['path' => 'uploads/catalog/'. $product->id .'/avored-double-bed.jpg', 'product_id' => $product->id, 'is_main_image' => 1]);  
+
+        // ProductImage::create(['path' => 'uploads/catalog/'. $product->id .'/avored-double-bed.jpg', 'product_id' => $product->id, 'is_main_image' => 1]);
         // $product->productPropertyIntegerValues()->create(['property_id' => $brandProperty->id, 'value' => $avoredOption->id]);
         // $product->productPropertyIntegerValues()->create(['property_id' => $materialProperty->id, 'value' => $oakwoodOption->id]);
 
@@ -242,8 +242,8 @@ class AvoredDemoDataSchema extends Migration
         ]);
         // $product->properties()->sync($brandProperty);
         // $product->properties()->sync($materialProperty);
-        
-        // ProductImage::create(['path' => 'uploads/catalog/'. $product->id .'/avored-queen-bed.jpg', 'product_id' => $product->id, 'is_main_image' => 1]);  
+
+        // ProductImage::create(['path' => 'uploads/catalog/'. $product->id .'/avored-queen-bed.jpg', 'product_id' => $product->id, 'is_main_image' => 1]);
         // $product->productPropertyIntegerValues()->create(['property_id' => $brandProperty->id, 'value' => $avoredOption->id]);
         // $product->productPropertyIntegerValues()->create(['property_id' => $materialProperty->id, 'value' => $oakwoodOption->id]);
 
@@ -279,8 +279,8 @@ class AvoredDemoDataSchema extends Migration
         ]);
         // $product->properties()->sync($brandProperty);
         // $product->properties()->sync($materialProperty);
-        
-        // ProductImage::create(['path' => 'uploads/catalog/'. $product->id .'/avored-bunk-bed.jpg', 'product_id' => $product->id, 'is_main_image' => 1]);  
+
+        // ProductImage::create(['path' => 'uploads/catalog/'. $product->id .'/avored-bunk-bed.jpg', 'product_id' => $product->id, 'is_main_image' => 1]);
         // $product->productPropertyIntegerValues()->create(['property_id' => $brandProperty->id, 'value' => $avoredOption->id]);
         // $product->productPropertyIntegerValues()->create(['property_id' => $materialProperty->id, 'value' => $whiteWoodOption->id]);
 
@@ -316,12 +316,12 @@ class AvoredDemoDataSchema extends Migration
         ]);
         // $product->properties()->sync($brandProperty);
         // $product->properties()->sync($materialProperty);
-        
+
         // ProductImage::create(['path' => 'uploads/catalog/'. $product->id .'/php-sofa-set.jpg', 'product_id' => $product->id, 'is_main_image' => 1]);
         // $product->productPropertyIntegerValues()->create(['property_id' => $brandProperty->id, 'value' => $phpOption->id]);
         // $product->productPropertyIntegerValues()->create(['property_id' => $materialProperty->id, 'value' => $whiteWoodOption->id]);
 
-        
+
         $price = rand(500, 1000) / 10;
         $product = Product::create([
             'type' => 'BASIC',
@@ -353,7 +353,7 @@ class AvoredDemoDataSchema extends Migration
         ]);
         // $product->properties()->sync($brandProperty);
         // $product->properties()->sync($materialProperty);
-    
+
         // ProductImage::create(['path' => 'uploads/catalog/'. $product->id .'/laravel-sofa-set.jpg', 'product_id' => $product->id, 'is_main_image' => 1]);
         // $product->productPropertyIntegerValues()->create(['property_id' => $brandProperty->id, 'value' => $laravelOption->id]);
         // $product->productPropertyIntegerValues()->create(['property_id' => $materialProperty->id, 'value' => $oakwoodOption->id]);
@@ -390,7 +390,7 @@ class AvoredDemoDataSchema extends Migration
         ]);
         // $product->properties()->sync($brandProperty);
         // $product->properties()->sync($materialProperty);
-        
+
         // ProductImage::create(['path' => 'uploads/catalog/'. $product->id .'/php-single-mattress.jpg', 'product_id' => $product->id, 'is_main_image' => 1]);
         // $product->productPropertyIntegerValues()->create(['property_id' => $brandProperty->id, 'value' => $phpOption->id]);
         // $product->productPropertyIntegerValues()->create(['property_id' => $materialProperty->id, 'value' => $oakwoodOption->id]);
@@ -425,9 +425,22 @@ class AvoredDemoDataSchema extends Migration
             'documentable_type' => Product::class,
             'documentable_id' => $product->id
         ]);
+
+        OrderStatus::create([
+            'name' => 'Pending',
+            'is_default' => 1
+        ]);
+        OrderStatus::create([
+            'name' => 'Processing',
+            'is_default' => 0
+        ]);
+        OrderStatus::create([
+            'name' => 'Complete',
+            'is_default' => 0
+        ]);
         // $product->properties()->sync($brandProperty);
         // $product->properties()->sync($materialProperty);
-        
+
         // ProductImage::create(['path' => 'uploads/catalog/'. $product->id .'/laravel-bedside-table.jpg', 'product_id' => $product->id, 'is_main_image' => 1]);
         // $product->productPropertyIntegerValues()->create(['property_id' => $brandProperty->id, 'value' => $laravelOption->id]);
         // $product->productPropertyIntegerValues()->create(['property_id' => $materialProperty->id, 'value' => $aluminumFrameOption->id]);
@@ -477,7 +490,7 @@ class AvoredDemoDataSchema extends Migration
     public function down()
     {
         Schema::disableForeignKeyConstraints();
-        
+
         Schema::enableForeignKeyConstraints();
     }
 
@@ -532,6 +545,6 @@ class AvoredDemoDataSchema extends Migration
         ];
 
         OrderProduct::create($orderProductData);
-        
+
     }
 }
