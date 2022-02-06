@@ -26,9 +26,6 @@
 		"avored/module-installer" : "dev-developed"
 	},
 	"autoload" : {
-		"classmap" : [
-			"database/seeds"
-		],
 		"psr-4" : {
 			"AvoRed\\DummyData\\" : "src"
 		}
