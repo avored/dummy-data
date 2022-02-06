@@ -23,13 +23,9 @@
 	],
 	"require" : {
 		"php" : ">=7.1.3",
-		"avored/module-installer" : "1.*",
-		"avored/framework" : "~2.0"
+		"avored/module-installer" : "dev-developed"
 	},
 	"autoload" : {
-		"classmap" : [
-			"database/seeds"
-		],
 		"psr-4" : {
 			"AvoRed\\DummyData\\" : "src"
 		}
